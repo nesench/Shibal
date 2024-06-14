@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Page</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom right, #8e44ad, #c0392b); 
+    color: #fff;
+    text-align: center;
+  }
+
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 30px;
+  }
+
+  .button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff3366;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+
+  .button:hover {
+    background-color: #e6005c;
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <h1>A site for payment method tests.</h1>
+    <p>On this site, you need to make a payment test according to the agreed terms and conditions. 
+      Please pay by clicking the PAY button.</p>
+    
+    <h1>Please make a record of your screen from the moment you start the test until its end.</h1>
+    
+    <p>How to record your Android screen. <a href="https://support.google.com/android/answer/9075928?hl=en">Link</a></p>
+    <p>How to record screen from iPhone, iPad. <a href="https://support.apple.com/en-us/102653">Link</a></p>
+    <p>How to record screen from MacBook. <a href="https://support.apple.com/en-us/102618">Link</a></p>
+    <p>How to record the screen with Windows. <a href="https://www.microsoft.com/en-us/windows/learning-center/how-to-record-screen-windows-11">Link</a></p>
+    
+    <h1>After you complete the payment, please provide the recorded video and a screenshot of debit to the manager.</h1>
+    
+    <form name="payment" method="post" action="https://sci.interkassa.com/" accept-charset="UTF-8">
+      <input type="hidden" name="ik_co_id" value="5cc46dbf3b1eafa81e8b4567"/>
+      <input type="hidden" name="ik_pm_no" value="ID_4233"/>
+      <input type="hidden" name="ik_am" value="10"/>
+      <input type="hidden" name="ik_cur" value="EUR"/>
+      <input type="hidden" name="ik_payment_method" value="eubanking"/>
+      <input type="hidden" name="ik_customer_first_name" value="John"/>
+      <input type="hidden" name="ik_customer_last_name" value="Smith"/>
+      <input type="hidden" name="ik_customer_ip" value="123.123.123"/>
+      <input type="hidden" name="ik_customer_phone" value="9112345678"/>
+      <input type="hidden" name="ik_customer_email" value="mail@mail.com"/>
+      <input type="hidden" name="ik_payment_currency" value="EUR"/>
+      <input type="hidden" name="ik_act" value="process"/>
+      <input type="hidden" name="ik_int" value="json"/>
+      <input type="hidden" name="ik_desc" value="sdj123"/>
+      <input type="submit" value="PAY" class="button">
+    </form>
+  </div>
+</body>
+</html>
